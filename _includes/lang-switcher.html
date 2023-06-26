@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-md-center mt-3 mb-3">
+        {% for lang in site.languages %}
+        {% capture old_prefix %}/{{ include.active_lang }}/{% endcapture %}
+        {% capture new_prefix %}/{{ lang }}/{% endcapture %}
+        {% if page.url == old_prefix and lang == 'en' %}
+            {% assign new_prefix = '/' %}
+        {% endif %}
+        {% unless page.url contains old_prefix %}
+            {% assign old_prefix = page.url %}
+            {% capture new_prefix %}/{{ lang }}{{ page.url }}{% endcapture %}
+        {% endunless %}
+
+            <span class="col-md-auto">
+                {% assign lang_name = site.data.locales[lang].language %}
+                {% if lang == include.active_lang %}
+                    {{ lang_name }}
+                {% else %}
+                   <a href="{{ page.url | replace: old_prefix, new_prefix }}">{{ lang_name }}</a>
+                {% endif %}
+            </span>
+        {% endfor %}
+    </div>
+</div>

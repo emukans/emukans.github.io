@@ -1,0 +1,6 @@
+{% assign lang = page.language | default: page.lang | default: "en" %}
+{% if page.translation_reference != nil %}
+  {% assign page_translations = site.documents | where: "translation_reference", page.translation_reference | where_exp: "item", "item.collection != page_language" | where_exp: "item", "item.published != false" %}
+{% endif %}
+
+{% assign languages = site.languages | where_exp: "item", "item.label != 'posts' and item.label != lang " %}
