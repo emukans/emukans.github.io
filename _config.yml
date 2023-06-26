@@ -170,7 +170,7 @@ defaults:
       language: en
       permalink: /en/:title/
   - scope:
-      path: "ru_index.html"
+      path: "ru_index.md"
     values:
       layout: home
       language: ru
