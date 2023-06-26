@@ -13,7 +13,7 @@
 
             <span class="col-md-auto">
                 {% assign lang_name = site.data.locales[lang].language %}
-                {% if lang == include.active_lang %}
+                {% if lang == include.active_lang or page.url contains '404' or page.url contains 'category' or page.url contains 'categories' or page.url contains 'tag' %}
                     {{ lang_name }}
                 {% else %}
                    <a href="{{ page.url | replace: old_prefix, new_prefix }}">{{ lang_name }}</a>
