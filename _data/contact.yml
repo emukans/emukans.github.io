@@ -6,13 +6,19 @@
 - type: twitter
   icon: "fab fa-twitter"
 
-- type: email
-  icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+#- type: email
+#  icon: "fas fa-envelope"
+#  noblank: true # open link in current tab
+
+- type: telegram
+  icon: "fa-brands fa-telegram"
+  url: 'https://t.me/deep_learning_nlp'
+  url_ru: 'https://t.me/deep_learning_nlp_ru'
 
 - type: rss
   icon: "fas fa-rss"
   noblank: true
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
