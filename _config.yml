@@ -27,7 +27,7 @@ description: >- # used by seo meta and the atom feed
   Unlock the potential of natural language processing with deep learning techniques. Explore the power of deep learning for NLP and revolutionize the way computers understand and process human language. Discover cutting-edge algorithms, models, and applications in this comprehensive resource for researchers, developers, and enthusiasts.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ""
+url: "https://emukans.github.io"
 
 github:
   username: emukans # change to your github username
