@@ -30,7 +30,7 @@ The model is available on [HuggingFace](https://huggingface.co/s2w-ai/DarkBERT).
 ### Motivation
 ![LENS scoring sample](lens-sample.png)
 There are no solid metric for text simplification task. Most of generic metrics, such as BLEU, BERTScore and specific metrics like SARI correlates with human judgement very poorly.
-The authors introduce a *learnable* metric, that demonstrates high correlation with the human scoring. 
+The authors introduce a **learnable** metric, that demonstrates high correlation with the human scoring. 
 
 ### Method
 The authors fine-tuned RoBERTa model on their own dataset (SimpEval_past) and then prepare a new benchmark for evaluation (SimpEval2022) text simplification.
