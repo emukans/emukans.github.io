@@ -3,17 +3,12 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
-# and doesn't have a custom domain.
-baseurl: ""
-
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
-languages: [en, ru]
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+# Change to your timezone › https://zones.arilyn.cc
 timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -21,44 +16,67 @@ timezone:
 
 title: Deep learning # the main title
 
-tagline: For Natural Language Processing (NLP) # it will display as the sub-title
+tagline: For Natural Language Processing (NLP) # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Unlock the potential of natural language processing with deep learning techniques. Explore the power of deep learning for NLP and revolutionize the way computers understand and process human language. Discover cutting-edge algorithms, models, and applications in this comprehensive resource for researchers, developers, and enthusiasts.
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+# Fill in the protocol & hostname for your site.
+# E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://emukans.github.io"
 
 github:
-  username: emukans # change to your github username
+  username: emukans # change to your GitHub username
 
 twitter:
-  username: EdwardMukan # change to your twitter username
+  username: EdwardMukan # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Edward Mukan
   email: mukans.work@gmail.com # change to your email address
+  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/EdwardMukan # change to your twitter homepage
-    - https://github.com/emukans # change to your github homepage
-    - https://www.linkedin.com/in/eduards-mukans-274ba6111
+    - https://twitter.com/EdwardMukan # change to your Twitter homepage
+    - https://github.com/emukans # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
+    - https://www.linkedin.com/in/eduards-mukans-274ba6111
 
-google_site_verification: # fill in to your verification string
+# Site Verification Settings
+webmaster_verifications:
+  google: # fill in your Google verification code
+  bing: # fill in your Bing verification code
+  alexa: # fill in your Alexa verification code
+  yandex: # fill in your Yandex verification code
+  baidu: # fill in your Baidu verification code
+  facebook: # fill in your Facebook verification code
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: # fill in your Google Analytics ID
-  # Google Analytics pageviews report settings
-  pv:
-    proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
-    cache_path: # the local PV cache data, friendly to visitors from GFW region
+# Web Analytics Settings
+analytics:
+  google:
+    id: G-WCGZPMK2PB # fill in your Google Analytics ID
+  goatcounter:
+    id: # fill in your GoatCounter ID
+  umami:
+    id: # fill in your Umami ID
+    domain: # fill in your Umami domain
+  matomo:
+    id: # fill in your Matomo ID
+    domain: # fill in your Matomo domain
+  cloudflare:
+    id: # fill in your Cloudflare Web Analytics token
+  fathom:
+    id: # fill in your Fathom Site ID
+
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -68,27 +86,42 @@ google_analytics:
 #
 # Available options:
 #
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
+#     light — Use the light color scheme
+#     dark — Use the dark color scheme
 #
-theme_mode: # [light|dark]
+theme_mode: # [light | dark]
 
-# The CDN endpoint for images.
+# The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
+# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/img/favicons/android-chrome-192x192.png
+
+# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
+# It can be overridden by a customized `page.image` in front matter.
+social_preview_image: # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
+actions:
+  # Display "Edit this post" action on each post page to encourage contributions.
+  edit_post:
+    enabled: false # set to true to display the "Edit this post" action.
+    url: "" # repository base URL, e.g. https://github.com/cotes2020/jekyll-theme-chirpy/edit/master
+    # Use dynamic or static URL for the edit link.
+    # If `static_url` is false, the post's path will be appended to the `url` above as the final edit link.
+    # Set to true if the URL should remain unchanged, which means each post will share the same edit link.
+    static_url: false # [ true | false ]
+
 comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: # [disqus | utterances | giscus]
+  # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
@@ -102,6 +135,7 @@ comments:
     category:
     category_id:
     mapping: # optional, default to 'pathname'
+    strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
@@ -112,14 +146,27 @@ assets:
     enabled: # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: # [development|production]
+    env: # [development | production]
 
 pwa:
-  enabled: true # the option for PWA feature
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # shares the same domain name as the current website.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+
+paginate: 10
+
+# The base URL of your site
+baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
@@ -137,59 +184,25 @@ collections:
 
 defaults:
   - scope:
-      path: "_posts/en" # An empty string here means all files in the project
+      path: "" # An empty string here means all files in the project
       type: posts
     values:
       layout: post
-      language: en
-      comments: false # Enable comments in posts.
+      comments: true # Enable comments in posts.
       toc: true # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      permalink: /en/posts/:title/
-  - scope:
-      path: "_posts/ru" # An empty string here means all files in the project
-      type: posts
-    values:
-      layout: post
-      language: ru
-      comments: false # Enable comments in posts.
-      toc: true # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
-      permalink: /ru/posts/:title/
+      permalink: /posts/:title/
   - scope:
       path: _drafts
     values:
       comments: false
   - scope:
-      path: "_tabs/en"
+      path: ""
       type: tabs # see `site.collections`
     values:
       layout: page
-      language: en
-      permalink: /en/:title/
-  - scope:
-      path: "ru_index.md"
-    values:
-      layout: home
-      language: ru
-      permalink: /ru/
-  - scope:
-      path: "_tabs/ru"
-      type: tabs # see `site.collections`
-    values:
-      layout: page
-      language: ru
-      permalink: /ru/:title/
-  - scope:
-      path: assets/img/favicons
-    values:
-      swcache: true
-  - scope:
-      path: assets/js/dist
-    values:
-      swcache: true
+      permalink: /:title/
 
 sass:
   style: compressed
@@ -206,13 +219,14 @@ compress_html:
 exclude:
   - "*.gem"
   - "*.gemspec"
+  - docs
   - tools
   - README.md
-  - CHANGELOG.md
   - LICENSE
-  - rollup.config.js
-  - node_modules
-  - package*.json
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+  - Makefile
 
 jekyll-archives:
   enabled: [categories, tags]

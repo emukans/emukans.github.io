@@ -2,9 +2,12 @@
 layout: post
 title: Neural network working principle
 date: 2023-06-26 19:51 +0300
-img_path: /assets/post/xor
+media_subpath: /assets/post/xor
 categories: [Tutorial]
 tags: [mlp, activation functions, xor]
+redirect_from:
+  - /en/posts/neural-network-working-principle/
+  - /ru/posts/neural-network-working-principle/
 ---
 
 ## Classical Information Encoding

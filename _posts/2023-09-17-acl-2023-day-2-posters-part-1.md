@@ -2,9 +2,12 @@
 layout: post
 title: ACL 2023 Day 2 (Posters)
 date: 2023-09-17 15:19 +0300
-img_path: /assets/post/acl2023-2
+media_subpath: /assets/post/acl2023-2
 categories: [Notes, Posters]
 tags: [acl2023]
+redirect_from:
+  - /en/posts/acl-2023-day-2-posters-part-1/
+  - /ru/posts/acl-2023-day-2-posters-part-1/
 ---
 
 ## DarkBERT: A Language Model for the Dark Side of the Internet

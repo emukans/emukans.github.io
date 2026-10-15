@@ -2,9 +2,12 @@
 layout: post
 title: Weakly supervised learning
 date: 2023-05-01 19:51 +0300
-img_path: /assets/post/weakly-supervised
+media_subpath: /assets/post/weakly-supervised
 categories: [Tutorial]
 tags: [weak supervision, unsupervised]
+redirect_from:
+  - /en/posts/weakly-supervised-learning/
+  - /ru/posts/weakly-supervised-learning/
 ---
 
 Machine learning has revolutionized the way we solve complex problems, from natural language processing to image recognition.

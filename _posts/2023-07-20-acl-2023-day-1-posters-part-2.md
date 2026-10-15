@@ -2,9 +2,12 @@
 layout: post
 title: ACL 2023 Day 1 (Posters, part 2)
 date: 2023-07-23 19:04 +0300
-img_path: /assets/post/acl2023-1
+media_subpath: /assets/post/acl2023-1
 categories: [Notes, Posters]
 tags: [acl2023]
+redirect_from:
+  - /en/posts/acl-2023-day-1-posters-part-2/
+  - /ru/posts/acl-2023-day-1-posters-part-2/
 ---
 
 ## DIONYSUS: A Pre-trained Model for Low-Resource Dialogue Summarization

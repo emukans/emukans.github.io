@@ -4,29 +4,27 @@
   icon: "fab fa-github"
 
 - type: twitter
-  icon: "fab fa-twitter"
+  icon: "fa-brands fa-x-twitter"
 
-#- type: email
-#  icon: "fas fa-envelope"
-#  noblank: true # open link in current tab
+# - type: email
+#   icon: "fas fa-envelope"
+#   noblank: true # open link in current tab
 
 - type: telegram
   icon: "fa-brands fa-telegram"
-  url: 'https://t.me/deep_learning_nlp'
-  url_ru: 'https://t.me/deep_learning_nlp_ru'
+  url: "https://t.me/deep_learning_nlp"
 
 - type: rss
   icon: "fas fa-rss"
   noblank: true
 
-- type: YouTube
+- type: youtube
   icon: "fab fa-youtube"
   url: "https://www.youtube.com/channel/UC_GQSq-JQNBN60xaYFMBfkg"
 
-- type: Linkedin
+- type: linkedin
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/eduards-mukans-274ba6111"
-
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
@@ -40,3 +38,15 @@
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
+#
+# - type: bluesky
+#   icon: 'fa-brands fa-bluesky'
+#   url: ''                   # Fill with your Bluesky profile link
+#
+# - type: reddit
+#   icon: 'fa-brands fa-reddit'
+#   url: ''                   # Fill with your Reddit profile link
+#
+# - type: threads
+#   icon: 'fa-brands fa-threads'
+#   url: ''                   # Fill with your Threads profile link
