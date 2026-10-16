@@ -14,12 +14,13 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Deep learning # the main title
+title: Eduards Mukans # the main title
 
-tagline: For Natural Language Processing (NLP) # it will display as the subtitle
+tagline: Production LLM agents, RAG and NLP research # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Unlock the potential of natural language processing with deep learning techniques. Explore the power of deep learning for NLP and revolutionize the way computers understand and process human language. Discover cutting-edge algorithms, models, and applications in this comprehensive resource for researchers, developers, and enthusiasts.
+  Eduards Mukans, ML Architect at Graip.AI and NLP researcher. Notes on building
+  production LLM agents and RAG systems, evaluation, and NLP research.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,16 +35,15 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Edward Mukan
+  name: Eduards Mukans
   email: mukans.work@gmail.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/EdwardMukan # change to your Twitter homepage
-    - https://github.com/emukans # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
     - https://www.linkedin.com/in/eduards-mukans-274ba6111
+    - https://github.com/emukans
+    - https://orcid.org/0009-0000-2004-5431
+    - https://scholar.google.com/citations?user=xr2LfxYAAAAJ
 
 # Site Verification Settings
 webmaster_verifications:
@@ -99,7 +99,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/favicons/web-app-manifest-192x192.png
+avatar: /assets/img/avatar.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -227,6 +227,7 @@ exclude:
   - "*.config.js"
   - "package*.json"
   - Makefile
+  - blog-update-tasks.md
 
 jekyll-archives:
   enabled: [categories, tags]

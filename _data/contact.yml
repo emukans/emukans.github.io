@@ -25,6 +25,14 @@
 - type: linkedin
   icon: "fab fa-linkedin"
   url: "https://www.linkedin.com/in/eduards-mukans-274ba6111"
+
+- type: orcid
+  icon: "fa-brands fa-orcid"
+  url: "https://orcid.org/0009-0000-2004-5431"
+
+- type: google-scholar
+  icon: "fa-brands fa-google-scholar"
+  url: "https://scholar.google.com/citations?user=xr2LfxYAAAAJ"
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
