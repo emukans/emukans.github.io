@@ -1,7 +1,7 @@
 ---
 title: "A 10-Step Workflow for NLP Shared Tasks on a Small Compute Budget"
 description: "How to spend limited compute in an NLP shared task: a three-phase, 10-step workflow from my doctoral thesis."
-date: 2026-10-19 09:00:00 +0300
+date: 2026-10-19 00:00:00 +0300
 categories: [Research, Shared tasks]
 tags: [shared-tasks, semeval, smm4h, fine-tuning, methodology]
 image:
