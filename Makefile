@@ -25,7 +25,7 @@ update: ## Update gems to the latest allowed versions (Chirpy, Jekyll, ...)
 	$(BUNDLE) update
 
 serve: ## Start the dev server with live reload (PORT=4000)
-	$(BUNDLE) exec jekyll serve --livereload --port $(PORT)
+	$(BUNDLE) exec jekyll serve --livereload --future --port $(PORT)
 
 drafts: ## Start the dev server including _drafts
 	$(BUNDLE) exec jekyll serve --livereload --drafts --port $(PORT)
