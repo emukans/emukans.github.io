@@ -1,0 +1,197 @@
+/*
+ * Proceedings style guide: figure components
+ * Requires tokens.css. Every class is prefixed .sg- so it can sit inside any site.
+ * Templates in templates/ show how they combine.
+ */
+
+/* Figure card: one idea per figure */
+.sg-figure {
+  margin: 0;
+  display: grid;
+  gap: var(--sg-space-4);
+  padding: var(--sg-space-5);
+  background: var(--sg-surface);
+  color: var(--sg-ink);
+  border: var(--sg-stroke) solid var(--sg-border);
+  border-radius: var(--sg-radius);
+  font: var(--sg-weight-body) var(--sg-size-body) / var(--sg-leading-body) var(--sg-font-body);
+}
+
+.sg-figure-title {
+  margin: 0;
+  font: var(--sg-weight-title) var(--sg-size-heading) / var(--sg-leading-heading) var(--sg-font-title);
+  text-wrap: balance;
+}
+
+.sg-figure-num {
+  color: var(--sg-muted);
+  font-weight: var(--sg-weight-body);
+}
+
+/* Footer: every figure names its source */
+.sg-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sg-space-3);
+  padding-top: var(--sg-space-2);
+  border-top: var(--sg-stroke) solid var(--sg-border);
+  font: var(--sg-size-caption) / var(--sg-leading-caption) var(--sg-font-body);
+  color: var(--sg-muted);
+}
+
+/* Small label above a group */
+.sg-label {
+  margin: 0;
+  font: var(--sg-weight-strong) var(--sg-size-caption) / 1.2 var(--sg-font-body);
+  letter-spacing: 0.01em;
+  color: var(--sg-muted);
+}
+
+/* Question bubble: the user's input, always blue */
+.sg-question {
+  justify-self: start;
+  max-width: 100%;
+  padding: var(--sg-space-2) var(--sg-space-3);
+  background: color-mix(in srgb, var(--sg-blue) var(--sg-tint), var(--sg-surface));
+  border: var(--sg-stroke) solid var(--sg-blue);
+  border-radius: var(--sg-radius) var(--sg-radius) var(--sg-radius) var(--sg-radius-sm);
+}
+
+.sg-question .sg-label {
+  color: var(--sg-blue);
+  margin-bottom: var(--sg-space-1);
+}
+
+/* Two or more columns that compare approaches */
+.sg-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr));
+  gap: var(--sg-space-4);
+}
+
+.sg-column {
+  display: grid;
+  gap: var(--sg-space-2);
+  align-content: start;
+  min-width: 0;
+}
+
+/* Chunk card: a retrieved passage, document or step */
+.sg-chunk {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--sg-space-1) var(--sg-space-3);
+  padding: var(--sg-space-2) var(--sg-space-3);
+  background: var(--sg-bg);
+  border: var(--sg-stroke) solid var(--sg-border);
+  border-radius: var(--sg-radius-sm);
+  font-size: calc(var(--sg-size-body) * 0.875);
+  line-height: 1.45;
+}
+
+.sg-chunk.is-hit {
+  border-color: var(--sg-green);
+  background: color-mix(in srgb, var(--sg-green) var(--sg-tint), var(--sg-bg));
+}
+
+.sg-chunk.is-miss {
+  border-color: var(--sg-red);
+  background: color-mix(in srgb, var(--sg-red) var(--sg-tint), var(--sg-bg));
+}
+
+.sg-chunk.is-context {
+  border-color: var(--sg-blue);
+  background: color-mix(in srgb, var(--sg-blue) var(--sg-tint), var(--sg-bg));
+}
+
+.sg-source {
+  grid-column: 1 / -1;
+  font: calc(var(--sg-size-caption) * 0.9) / 1.2 var(--sg-font-mono);
+  color: var(--sg-muted);
+}
+
+/* Tick and cross marks */
+.sg-mark {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  align-self: start;
+  color: var(--sg-on-mark);
+}
+
+.sg-mark svg {
+  width: 0.75em;
+  height: 0.75em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sg-mark.is-hit { background: var(--sg-green); }
+.sg-mark.is-miss { background: var(--sg-red); }
+
+/* Verdict line under a column */
+.sg-verdict {
+  font-weight: var(--sg-weight-strong);
+  font-size: calc(var(--sg-size-body) * 0.85);
+}
+
+.sg-verdict.is-hit { color: var(--sg-green); }
+.sg-verdict.is-miss { color: var(--sg-red); }
+
+/* Pills and pipelines */
+.sg-pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sg-space-2);
+}
+
+.sg-pill {
+  padding: var(--sg-space-1) var(--sg-space-3);
+  background: var(--sg-bg);
+  border: var(--sg-stroke) solid var(--sg-border);
+  border-radius: var(--sg-radius-pill);
+  font: var(--sg-weight-strong) calc(var(--sg-size-body) * 0.8125) / 1.3 var(--sg-font-body);
+  white-space: nowrap;
+}
+
+.sg-pill.is-active {
+  color: var(--sg-blue);
+  border-color: var(--sg-blue);
+  background: color-mix(in srgb, var(--sg-blue) var(--sg-tint), var(--sg-bg));
+}
+
+.sg-arrow {
+  color: var(--sg-muted);
+}
+
+/* Single stat: one number per figure */
+.sg-stat {
+  display: grid;
+  gap: var(--sg-space-1);
+}
+
+.sg-stat-value {
+  font: var(--sg-weight-title) calc(var(--sg-size-title) * 1.3) / 1 var(--sg-font-title);
+  font-variant-numeric: tabular-nums;
+}
+
+.sg-stat-label {
+  font-size: var(--sg-size-caption);
+  color: var(--sg-muted);
+}
+
+/* Callout in prose */
+.sg-callout {
+  padding: var(--sg-space-3) var(--sg-space-4);
+  background: var(--sg-surface);
+  border: var(--sg-stroke) solid var(--sg-border);
+  border-left: var(--sg-stroke-accent) solid var(--sg-blue);
+  border-radius: var(--sg-radius-sm);
+}

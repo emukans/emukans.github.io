@@ -26,6 +26,21 @@ package-lock.json
 _sass/vendors
 assets/js/dist
 
+# Style guide: only the two files the site loads are published
+# (see _includes/metadata-hook.html); the guide, templates and render script stay local
+styleguide/*
+!styleguide/tokens.css
+!styleguide/components.css
+
+# Python (styleguide/render.py)
+__pycache__/
+.venv/
+venv/
+
+# Local tooling and notes, not used by the site
+.claude/
+blog-update-tasks.md
+
 # Hidden system files
 *~
 .DS_Store

@@ -1,0 +1,117 @@
+/*
+ * Proceedings style guide: design tokens
+ * Source of truth for colour, type, spacing and shape. See STYLE.md.
+ *
+ * Light values live on :root. Dark values apply when:
+ *   - the OS prefers dark and no explicit light mode is set, or
+ *   - an ancestor sets data-theme="dark" (generic) or data-bs-theme="dark" (Bootstrap / Chirpy), or
+ *   - an element has the class .sg-dark (force dark on one figure).
+ * .sg-light forces light on one element.
+ */
+
+:root,
+.sg-light {
+  /* Neutrals */
+  --sg-bg: #ffffff;
+  --sg-surface: #f4f5fb;
+  --sg-ink: #1b1e2b;
+  --sg-muted: #5d6275;
+  --sg-border: #d6d9e4;
+
+  /* Meanings */
+  --sg-blue: #4338ca;   /* user, query, added context; links */
+  --sg-green: #2e7d5b;  /* match, success, recommended path */
+  --sg-red: #b4233c;    /* miss, failure, risk */
+  --sg-amber: #8a5a00;  /* caution; blog callouts only, never in figures */
+
+  /* Text drawn on a solid meaning colour (tick and cross marks) */
+  --sg-on-mark: #ffffff;
+
+  /* Tinted fills: 8% of a meaning colour over the surface behind it */
+  --sg-tint: 8%;
+}
+
+.sg-dark {
+  --sg-bg: #12131a;
+  --sg-surface: #1a1c26;
+  --sg-ink: #e7e8ef;
+  --sg-muted: #9a9eb2;
+  --sg-border: #30334a;
+  --sg-blue: #9c95ff;
+  --sg-green: #5dc497;
+  --sg-red: #f27a8e;
+  --sg-amber: #e3b341;
+  --sg-on-mark: #12131a;
+  --sg-tint: 12%;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-bs-theme="light"]) {
+    --sg-bg: #12131a;
+    --sg-surface: #1a1c26;
+    --sg-ink: #e7e8ef;
+    --sg-muted: #9a9eb2;
+    --sg-border: #30334a;
+    --sg-blue: #9c95ff;
+    --sg-green: #5dc497;
+    --sg-red: #f27a8e;
+    --sg-amber: #e3b341;
+    --sg-on-mark: #12131a;
+    --sg-tint: 12%;
+  }
+}
+
+:root[data-theme="dark"],
+:root[data-bs-theme="dark"] {
+  --sg-bg: #12131a;
+  --sg-surface: #1a1c26;
+  --sg-ink: #e7e8ef;
+  --sg-muted: #9a9eb2;
+  --sg-border: #30334a;
+  --sg-blue: #9c95ff;
+  --sg-green: #5dc497;
+  --sg-red: #f27a8e;
+  --sg-amber: #e3b341;
+  --sg-on-mark: #12131a;
+  --sg-tint: 12%;
+}
+
+:root {
+  /* Type: open fonts only (SIL Open Font License 1.1). Load them with fonts.css. */
+  --sg-font-title: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --sg-font-body: "Source Sans 3", "Source Sans Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sg-font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --sg-weight-title: 600;
+  --sg-weight-body: 400;
+  --sg-weight-strong: 600;
+
+  /* Four sizes only. Web values; image templates multiply by --sg-scale. */
+  --sg-scale: 1;
+  --sg-size-title: calc(30px * var(--sg-scale));
+  --sg-size-heading: calc(21px * var(--sg-scale));
+  --sg-size-body: calc(16px * var(--sg-scale));
+  --sg-size-caption: calc(13px * var(--sg-scale));
+
+  --sg-leading-title: 1.15;
+  --sg-leading-heading: 1.25;
+  --sg-leading-body: 1.6;
+  --sg-leading-caption: 1.4;
+
+  /* Spacing: 4px steps */
+  --sg-space-1: calc(4px * var(--sg-scale));
+  --sg-space-2: calc(8px * var(--sg-scale));
+  --sg-space-3: calc(12px * var(--sg-scale));
+  --sg-space-4: calc(16px * var(--sg-scale));
+  --sg-space-5: calc(24px * var(--sg-scale));
+  --sg-space-6: calc(32px * var(--sg-scale));
+  --sg-space-7: calc(48px * var(--sg-scale));
+
+  /* Shape */
+  --sg-radius: calc(8px * var(--sg-scale));
+  --sg-radius-sm: calc(5px * var(--sg-scale));
+  --sg-radius-pill: 999px;
+  --sg-stroke: calc(1px * var(--sg-scale));
+  --sg-stroke-accent: calc(3px * var(--sg-scale));
+}

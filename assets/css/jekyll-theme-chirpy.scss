@@ -1,0 +1,142 @@
+---
+---
+
+/*
+ * Chirpy theme entry point with the Proceedings style guide applied.
+ * Colours and fonts come from styleguide/tokens.css (loaded in _includes/metadata-hook.html);
+ * this file only maps Chirpy's own variables onto those tokens.
+ */
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}',
+  $font-family-base: ('Source Sans 3', 'Source Sans Pro', system-ui, sans-serif),
+  $font-family-heading: ('Source Serif 4', 'Source Serif Pro', Georgia, serif)
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ---------- Proceedings style guide ---------- */
+
+/* Same specificity as Chirpy's mode selectors and declared after them, so these win in every mode.
+   The --sg-* tokens switch between light and dark themselves. */
+:root[data-bs-theme],
+:root:not([data-bs-theme]) {
+  --bs-font-monospace: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Framework */
+  --main-bg: var(--sg-bg);
+  --main-border-color: var(--sg-border);
+  --mask-bg: var(--sg-muted);
+
+  /* Text */
+  --text-color: var(--sg-ink);
+  --text-muted-color: var(--sg-muted);
+  --text-muted-highlight-color: var(--sg-ink);
+  --heading-color: var(--sg-ink);
+  --label-color: var(--sg-muted);
+  --blockquote-border-color: var(--sg-border);
+  --blockquote-text-color: var(--sg-muted);
+  --link-color: var(--sg-blue);
+  --link-underline-color: color-mix(in srgb, var(--sg-blue) 35%, transparent);
+  --checkbox-checked-color: var(--sg-blue);
+
+  /* Buttons and menus */
+  --button-bg: var(--sg-bg);
+  --btn-border-color: var(--sg-border);
+  --btn-backtotop-color: var(--sg-muted);
+  --btn-backtotop-border-color: var(--sg-border);
+  --menu-bg: var(--sg-bg);
+  --menu-border-color: var(--sg-border);
+  --menu-highlight-bg: var(--sg-surface);
+
+  /* Sidebar */
+  --site-title-color: var(--sg-ink);
+  --site-subtitle-color: var(--sg-muted);
+  --sidebar-bg: var(--sg-surface);
+  --sidebar-border-color: var(--sg-border);
+  --sidebar-muted-color: var(--sg-muted);
+  --sidebar-active-color: var(--sg-ink);
+  --sidebar-hover-bg: color-mix(in srgb, var(--sg-blue) var(--sg-tint), var(--sg-surface));
+  --sidebar-btn-bg: var(--sg-bg);
+  --sidebar-btn-color: var(--sg-muted);
+  --avatar-border-color: var(--sg-bg);
+
+  /* Topbar */
+  --topbar-bg: color-mix(in srgb, var(--sg-bg) 80%, transparent);
+  --topbar-text-color: var(--sg-ink);
+  --search-border-color: var(--sg-border);
+  --search-icon-color: var(--sg-muted);
+  --input-focus-border-color: var(--sg-blue);
+
+  /* Home and posts */
+  --post-list-text-color: var(--sg-muted);
+  --btn-patinator-text-color: var(--sg-ink);
+  --btn-paginator-hover-color: var(--sg-surface);
+  --toc-highlight: var(--sg-blue);
+  --toc-popup-border-color: var(--sg-border);
+  --btn-share-color: var(--sg-muted);
+  --btn-share-hover-color: var(--sg-blue);
+  --card-bg: var(--sg-bg);
+  --card-hover-bg: var(--sg-surface);
+  --card-header-bg: var(--sg-surface);
+  --card-shadow: 0 0 0 1px var(--sg-border);
+  --footnote-target-bg: color-mix(in srgb, var(--sg-blue) var(--sg-tint), var(--sg-bg));
+  --tb-odd-bg: var(--sg-surface);
+  --tb-even-bg: var(--sg-bg);
+  --tb-border-color: var(--sg-border);
+  --dash-color: var(--sg-border);
+
+  /* Callouts: tip = green, info = blue, warning = amber, danger = red */
+  --prompt-text-color: var(--sg-ink);
+  --prompt-tip-bg: color-mix(in srgb, var(--sg-green) var(--sg-tint), var(--sg-bg));
+  --prompt-tip-icon-color: var(--sg-green);
+  --prompt-info-bg: color-mix(in srgb, var(--sg-blue) var(--sg-tint), var(--sg-bg));
+  --prompt-info-icon-color: var(--sg-blue);
+  --prompt-warning-bg: color-mix(in srgb, var(--sg-amber) var(--sg-tint), var(--sg-bg));
+  --prompt-warning-icon-color: var(--sg-amber);
+  --prompt-danger-bg: color-mix(in srgb, var(--sg-red) var(--sg-tint), var(--sg-bg));
+  --prompt-danger-icon-color: var(--sg-red);
+
+  /* Tags, categories, archive */
+  --tag-border: var(--sg-border);
+  --tag-hover: var(--sg-surface);
+  --search-tag-bg: var(--sg-surface);
+  --categories-border: var(--sg-border);
+  --categories-hover-bg: var(--sg-surface);
+  --categories-icon-hover-color: var(--sg-blue);
+  --timeline-color: var(--sg-border);
+  --timeline-node-bg: var(--sg-muted);
+
+  /* Code (syntax colours stay Chirpy's) */
+  --language-border-color: var(--sg-border);
+  --highlight-bg-color: var(--sg-surface);
+  --highlighter-rouge-color: var(--sg-ink);
+  --inline-code-bg: var(--sg-surface);
+  --code-header-text-color: var(--sg-muted);
+}
+
+/* Sentence-case serif headings with a little tighter tracking */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+kbd {
+  font-family: var(--bs-font-monospace);
+}
+
+/* Figures generated from the style guide sit in posts without Chirpy's image shadow */
+.content .sg-figure {
+  margin-block: 1.5rem;
+}
+
+/* Sass drops the quotes when the font list is put into a custom property */
+.share-mastodon {
+  --wc-stm-font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+}
