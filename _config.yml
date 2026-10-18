@@ -149,9 +149,11 @@ assets:
     env: # [development | production]
 
 pwa:
+  # Keep `enabled: true`: it loads the script that retires the old service worker on visitors' browsers.
   enabled: true # The option for PWA feature (installable)
   cache:
-    enabled: true # The option for PWA offline cache
+    # Off: the offline cache served stale pages and styles after each deploy until the visitor clicked "Update".
+    enabled: false # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
@@ -228,11 +230,12 @@ exclude:
   - "package*.json"
   - Makefile
   - blog-update-tasks.md
-  - styleguide/*.md
-  - styleguide/*.json
-  - styleguide/fonts.css
-  - styleguide/templates
-  - styleguide/render.py
+  # Style guide: only tokens.css and components.css are published (matches .gitignore)
+  - styleguide/*
+
+include:
+  - styleguide/tokens.css
+  - styleguide/components.css
   - styleguide/out
 
 jekyll-archives:

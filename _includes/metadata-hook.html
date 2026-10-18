@@ -1,3 +1,5 @@
-<!-- Proceedings style guide: tokens drive the theme colours, components style generated figures -->
-<link rel="stylesheet" href="{{ '/styleguide/tokens.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/styleguide/components.css' | relative_url }}">
+<!-- Proceedings style guide: tokens drive the theme colours, components style generated figures.
+     ?v= changes on every build, so browsers fetch the new files right after a deploy. -->
+{% assign sg_version = site.time | date: '%s' %}
+<link rel="stylesheet" href="{{ '/styleguide/tokens.css' | relative_url }}?v={{ sg_version }}">
+<link rel="stylesheet" href="{{ '/styleguide/components.css' | relative_url }}?v={{ sg_version }}">

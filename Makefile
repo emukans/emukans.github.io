@@ -12,7 +12,7 @@ export LC_ALL := en_US.UTF-8
 PORT ?= 4000
 
 .DEFAULT_GOAL := help
-.PHONY: help install update serve drafts build test clean post draft publish
+.PHONY: help install update serve drafts build test clean post draft publish favicons
 
 help: ## Show available commands
 	@grep -E '^[a-z-]+:.*## ' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -37,6 +37,11 @@ test: build ## Build and check internal links/images, as CI does
 	$(BUNDLE) exec htmlproofer _site \
 		--disable-external \
 		--ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+favicons: ## Copy icons to the site root, where Safari and iOS look for them
+	cp assets/img/favicons/favicon.ico favicon.ico
+	cp assets/img/favicons/apple-touch-icon.png apple-touch-icon.png
+	cp assets/img/favicons/apple-touch-icon.png apple-touch-icon-precomposed.png
 
 clean: ## Remove build output and caches
 	$(BUNDLE) exec jekyll clean
