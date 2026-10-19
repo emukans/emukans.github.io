@@ -20,7 +20,7 @@ tagline: Production LLM agents, RAG and NLP research # it will display as the su
 
 description: >- # used by seo meta and the atom feed
   Eduards Mukans, ML Architect at Graip.AI and NLP researcher. Notes on building
-  production LLM agents and RAG systems, evaluation, and NLP research.
+  production LLM agents, RAG and document processing systems, and NLP research.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
