@@ -33,6 +33,14 @@
 - type: google-scholar
   icon: "fa-brands fa-google-scholar"
   url: "https://scholar.google.com/citations?user=xr2LfxYAAAAJ"
+
+- type: bluesky
+  icon: "fa-brands fa-bluesky"
+  url: "https://bsky.app/profile/emukans.bsky.social"
+
+- type: mastodon
+  icon: "fa-brands fa-mastodon"
+  url: "https://mastodon.social/@emukans" # rel="me" is added, so Mastodon can verify the blog link
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon

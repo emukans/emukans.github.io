@@ -37,13 +37,15 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Eduards Mukans
   email: mukans.work@gmail.com # change to your email address
-  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
+  fediverse_handle: "@emukans@mastodon.social" # credits you as author when posts are shared on Mastodon
   links:
     # The first element serves as the copyright owner's link
     - https://www.linkedin.com/in/eduards-mukans-274ba6111
     - https://github.com/emukans
     - https://orcid.org/0009-0000-2004-5431
     - https://scholar.google.com/citations?user=xr2LfxYAAAAJ
+    - https://bsky.app/profile/emukans.bsky.social
+    - https://mastodon.social/@emukans
 
 # Site Verification Settings
 webmaster_verifications:
