@@ -70,14 +70,22 @@ If you've tried question embeddings or document expansion in your own RAG system
 ## Citation
 
 ```bibtex
-@inproceedings{mukans-barzdins-2026-agents,
+@inproceedings{mukans-agents-2026,
   author    = {Mukans, Eduards and Barzdins, Guntis},
   title     = {Engineering a Production {RAG}-Based Agent Platform},
-  booktitle = {Baltic DB\&IS 2026 Conference Forum and Doctoral Consortium},
+  booktitle = {Joint Proceedings of Baltic DB\&IS Conference Forum and
+               Doctoral Consortium 2026},
+  editor    = {Nikiforova, Anastasija and Iqbal, Mubashar and
+               Kalibatien{\.e}, Diana and Kornyshova, Elena and
+               Robal, Tarmo and Matulevi{\v{c}}ius, Raimundas and
+               Liiv, Innar},
   series    = {CEUR Workshop Proceedings},
   volume    = {4211},
+  pages     = {43--54},
+  address   = {Tartu, Estonia},
+  publisher = {CEUR-WS.org},
   year      = {2026},
-  url       = {https://ceur-ws.org/Vol-4211/paper05.pdf}
+  url       = {https://ceur-ws.org/Vol-4211/paper05.pdf},
 }
 ```
 
