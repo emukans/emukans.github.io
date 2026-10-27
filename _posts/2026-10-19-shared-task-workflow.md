@@ -9,7 +9,7 @@ image:
   alt: "A 10-step workflow in three phases: get a working pipeline, beat a fixed baseline with new features, then scale the model and simplify. Step 10 loops back to step 7 with external knowledge."
 ---
 
-I have recently submitted my doctoral thesis, *Application of Large Language Models for Input Context Enrichment in NLP Pipelines*, for review. This post is adapted from one of its sections: the development workflow we used across four SemEval and SMM4H shared tasks between 2022 and 2025, together with my supervisor Guntis Barzdiņš.
+I have recently submitted my doctoral thesis, *Application of Large Language Models for Input Context Enrichment in NLP Pipelines*, for review. This post is adapted from one of its sections: the development workflow we used across four SemEval and SMM4H shared tasks between 2022 and 2025, together with my supervisor Guntis Bārzdiņš.
 
 A shared task gives you a fixed dataset, a fixed metric and a hard deadline. With a small compute budget, the question that matters is how to spend your GPU hours so that few of them go into dead-end experiments. The workflow below is our answer: 10 steps in three phases. Step 10 loops back to Step 7: when the training data has no more features to give, bring in external knowledge.
 

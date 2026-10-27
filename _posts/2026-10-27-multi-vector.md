@@ -9,7 +9,7 @@ image:
   alt: "A user asks 'Can I end my subscription early?'. The question matches the generated question 'Can I cancel the contract early?', which resolves to the source chunk about terminating with 30 days' notice."
 ---
 
-In June, Guntis Barzdiņš and I published [*Engineering a Production RAG-Based Agent Platform*](https://ceur-ws.org/Vol-4211/paper05.pdf) at the Baltic DB&IS 2026 Conference Forum and Doctoral Consortium. The paper describes the architecture of Graip.AI Agent Labs, the production agent platform I work on at Graip.AI: agent configuration, document ingestion, query routing, hybrid retrieval, human-in-the-loop approval and evaluation.
+In June, Guntis Bārzdiņš and I published [*Engineering a Production RAG-Based Agent Platform*](https://ceur-ws.org/Vol-4211/paper05.pdf) at the Baltic DB&IS 2026 Conference Forum and Doctoral Consortium. The paper describes the architecture of Graip.AI Agent Labs, the production agent platform I work on at Graip.AI: agent configuration, document ingestion, query routing, hybrid retrieval, human-in-the-loop approval and evaluation.
 
 This post covers one of the paper's two key ideas: **multi-vector indexing**, where every chunk of a document is stored under several vectors instead of one.
 
@@ -71,7 +71,7 @@ If you've tried question embeddings or document expansion in your own RAG system
 
 ```bibtex
 @inproceedings{mukans-barzdins-2026-agents,
-  author    = {Mukans, Eduards and Barzdi{\c{n}}{\v{s}}, Guntis},
+  author    = {Mukans, Eduards and Barzdins, Guntis},
   title     = {Engineering a Production {RAG}-Based Agent Platform},
   booktitle = {Baltic DB\&IS 2026 Conference Forum and Doctoral Consortium},
   series    = {CEUR Workshop Proceedings},
@@ -85,7 +85,7 @@ If you've tried question embeddings or document expansion in your own RAG system
 
 1. G. W. Furnas, T. K. Landauer, L. M. Gomez, S. T. Dumais. The vocabulary problem in human-system communication. *Communications of the ACM*, 30(11):964–971, 1987. [doi:10.1145/32206.32212](https://doi.org/10.1145/32206.32212)
 2. Anthropic. Introducing contextual retrieval. Engineering blog, 2024. [anthropic.com](https://www.anthropic.com/engineering/contextual-retrieval)
-3. E. Mukans, G. Strazds, G. Barzdiņš. RIGA at SemEval-2022 Task 1: Scaling recurrent neural networks for CODWOE dictionary modeling. In *Proceedings of SemEval-2022*, pp. 82–87. ACL, 2022. [ACL Anthology](https://aclanthology.org/2022.semeval-1.9/)
+3. E. Mukans, G. Strazds, G. Barzdins. RIGA at SemEval-2022 Task 1: Scaling recurrent neural networks for CODWOE dictionary modeling. In *Proceedings of SemEval-2022*, pp. 82–87. ACL, 2022. [ACL Anthology](https://aclanthology.org/2022.semeval-1.9/)
 4. N. Thakur, N. Reimers, A. Rücklé, A. Srivastava, I. Gurevych. BEIR: A heterogeneous benchmark for zero-shot evaluation of information retrieval models. In *NeurIPS 2021 Datasets and Benchmarks Track*, 2021. [PDF](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/65b9eea6e1cc6bb9f0cd2a47751a186f-Paper-round2.pdf)
 5. M. Gospodinov, S. MacAvaney, C. Macdonald. Doc2Query--: When less is more. In *Advances in Information Retrieval (ECIR 2023)*, pp. 414–422. Springer, 2023. [doi:10.1007/978-3-031-28238-6_31](https://doi.org/10.1007/978-3-031-28238-6_31)
 6. L. Gao, X. Ma, J. Lin, J. Callan. Precise zero-shot dense retrieval without relevance labels. In *Proceedings of ACL 2023*. ACL, 2023. [doi:10.18653/v1/2023.acl-long.99](https://doi.org/10.18653/v1/2023.acl-long.99)

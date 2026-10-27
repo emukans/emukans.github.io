@@ -7,7 +7,7 @@ I build LLM agents and document processing systems that run in production.
 
 As ML Architect at [Graip.AI](https://graip.ai), I architect the full stack behind these systems: data pipelines, analytics and predictive models, and the infrastructure for training, serving and monitoring models at scale.
 
-My work is grounded in research. My doctoral studies in NLP at the University of Latvia, supervised by Prof. Guntis Barzdiņš, focused on enriching model inputs with LLM-generated context, the same idea that now powers retrieval in Agent Labs. Now I study when a task truly needs a large model and when a smaller one will do.
+My work is grounded in research. My doctoral studies in NLP at the University of Latvia, supervised by Prof. Guntis Bārzdiņš, focused on enriching model inputs with LLM-generated context, the same idea that now powers retrieval in Agent Labs. Now I study when a task truly needs a large model and when a smaller one will do.
 
 On this blog I write about production LLM agents, RAG, document AI and NLP research.
 
@@ -45,7 +45,7 @@ On this blog I write about production LLM agents, RAG, document AI and NLP resea
 
 ## Publications
 
-With Guntis Barzdiņš. The development workflow behind the shared-task papers is described in [this post](/posts/shared-task-workflow/).
+With Guntis Bārzdiņš. The development workflow behind the shared-task papers is described in [this post](/posts/shared-task-workflow/).
 
 - **2026** · Engineering a Production RAG-Based Agent Platform. *Baltic DB&IS 2026*, CEUR-WS Vol. 4211. [PDF](https://ceur-ws.org/Vol-4211/paper05.pdf)
 - **2025** · RIGA at SMM4H-HeaRD 2025: Context-enriched classification pipeline. *SMM4H-HeaRD workshop at ICWSM 2025*. [Paper](https://workshop-proceedings.icwsm.org/abstract.php?id=2025_66) · [Code](https://github.com/emukans/smm4h2025-riga)
