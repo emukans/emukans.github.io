@@ -232,6 +232,7 @@ exclude:
   - "package*.json"
   - Makefile
   - blog-update-tasks.md
+  - CLAUDE.md
   # Style guide: only tokens.css and components.css are published (matches .gitignore)
   - styleguide/*
 

@@ -39,6 +39,7 @@ venv/
 
 # Local tooling and notes, not used by the site
 .claude/
+CLAUDE.md
 blog-update-tasks.md
 
 # Hidden system files
